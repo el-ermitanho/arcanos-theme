@@ -1,0 +1,85 @@
+{
+  "name": "arcanos-theme",
+  "displayName": "Arcanos Theme",
+  "description": "Temas de color inspirados en los Arcanos Mayores del tarot: Arcanos, La Luna, La Estrella, El Ermitaño, El Sol y La Emperatriz.",
+  "version": "1.0.0",
+  "publisher": "davidsant7e",
+  "author": {
+    "name": "davidsant7e"
+  },
+  "license": "MIT",
+  "icon": "images/icono.png",
+  "galleryBanner": {
+    "color": "#1f2a5c",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidsant7e/arcanos-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsant7e/arcanos-theme/issues"
+  },
+  "homepage": "https://github.com/davidsant7e/arcanos-theme#readme",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "tarot",
+    "arcanos",
+    "dark",
+    "light",
+    "duotone",
+    "kiro",
+    "color-theme",
+    "espanol"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Arcanos",
+        "uiTheme": "vs-dark",
+        "path": "./themes/arcanos-color-theme.json"
+      },
+      {
+        "label": "Arcanos · XVIII La Luna",
+        "uiTheme": "vs-dark",
+        "path": "./themes/la-luna-color-theme.json"
+      },
+      {
+        "label": "Arcanos · XVII La Estrella",
+        "uiTheme": "vs-dark",
+        "path": "./themes/la-estrella-color-theme.json"
+      },
+      {
+        "label": "Arcanos · IX El Ermitaño",
+        "uiTheme": "vs-dark",
+        "path": "./themes/el-ermitano-color-theme.json"
+      },
+      {
+        "label": "Arcanos · XIX El Sol",
+        "uiTheme": "vs",
+        "path": "./themes/el-sol-color-theme.json"
+      },
+      {
+        "label": "Arcanos · III La Emperatriz",
+        "uiTheme": "vs",
+        "path": "./themes/la-emperatriz-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "generar": "node scripts/generar.mjs",
+    "capturas": "node scripts/capturas.mjs",
+    "empaquetar": "node scripts/generar.mjs && vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.2",
+    "ovsx": "^1.3.0",
+    "shiki": "^4.6.0"
+  }
+}

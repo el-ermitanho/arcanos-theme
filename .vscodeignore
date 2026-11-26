@@ -1,0 +1,9 @@
+node_modules/**
+scripts/**
+.github/**
+.gitignore
+images/icono.svg
+*.vsix
+paletas.json
+images/*.png
+!images/icono.png
