@@ -2,10 +2,10 @@
   "name": "arcanos-theme",
   "displayName": "Arcanos Theme",
   "description": "Temas de color inspirados en los Arcanos Mayores del tarot: Arcanos, La Luna, La Estrella, El Ermitaño, El Sol y La Emperatriz.",
-  "version": "1.0.0",
-  "publisher": "davidsant7e",
+  "version": "1.0.1",
+  "publisher": "el-ermitanho",
   "author": {
-    "name": "davidsant7e"
+    "name": "el-ermitanho"
   },
   "license": "MIT",
   "icon": "images/icono.png",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidsant7e/arcanos-theme"
+    "url": "https://github.com/el-ermitanho/arcanos-theme"
   },
   "bugs": {
-    "url": "https://github.com/davidsant7e/arcanos-theme/issues"
+    "url": "https://github.com/el-ermitanho/arcanos-theme/issues"
   },
-  "homepage": "https://github.com/davidsant7e/arcanos-theme#readme",
+  "homepage": "https://github.com/el-ermitanho/arcanos-theme#readme",
   "engines": {
     "vscode": "^1.70.0"
   },

@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/davidsant7e/arcanos-theme/main/images/icono.png" alt="Arcanos Theme" width="110"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/el-ermitanho/arcanos-theme/main/images/icono.png" alt="Arcanos Theme" width="110"></p>
 
 # Arcanos Theme
 
@@ -18,27 +18,27 @@ Temas de color para **VS Code**, **Kiro** y otros editores compatibles, inspirad
 | **III · La Emperatriz** | claro | Jardín al mediodía: verde, marfil y rosa. |
 
 ### Arcanos
-![Arcanos](https://raw.githubusercontent.com/davidsant7e/arcanos-theme/main/images/arcanos.png)
+![Arcanos](https://raw.githubusercontent.com/el-ermitanho/arcanos-theme/main/images/arcanos.png)
 
 ### XVIII · La Luna
-![La Luna](https://raw.githubusercontent.com/davidsant7e/arcanos-theme/main/images/la-luna.png)
+![La Luna](https://raw.githubusercontent.com/el-ermitanho/arcanos-theme/main/images/la-luna.png)
 
 ### XVII · La Estrella
-![La Estrella](https://raw.githubusercontent.com/davidsant7e/arcanos-theme/main/images/la-estrella.png)
+![La Estrella](https://raw.githubusercontent.com/el-ermitanho/arcanos-theme/main/images/la-estrella.png)
 
 ### IX · El Ermitaño
-![El Ermitaño](https://raw.githubusercontent.com/davidsant7e/arcanos-theme/main/images/el-ermitano.png)
+![El Ermitaño](https://raw.githubusercontent.com/el-ermitanho/arcanos-theme/main/images/el-ermitano.png)
 
 ### XIX · El Sol
-![El Sol](https://raw.githubusercontent.com/davidsant7e/arcanos-theme/main/images/el-sol.png)
+![El Sol](https://raw.githubusercontent.com/el-ermitanho/arcanos-theme/main/images/el-sol.png)
 
 ### III · La Emperatriz
-![La Emperatriz](https://raw.githubusercontent.com/davidsant7e/arcanos-theme/main/images/la-emperatriz.png)
+![La Emperatriz](https://raw.githubusercontent.com/el-ermitanho/arcanos-theme/main/images/la-emperatriz.png)
 
 ## Instalar
 
-- **Kiro / VSCodium / Cursor** (Open VSX): Extensiones (`Ctrl+Shift+X`) → busca **Arcanos Theme** → Instalar. O en la web: <https://open-vsx.org/extension/davidsant7e/arcanos-theme>.
-- **Archivo `.vsix`**: descárgalo de [Releases](https://github.com/davidsant7e/arcanos-theme/releases) y en el editor: `Ctrl+Shift+P` → *Extensions: Install from VSIX…*.
+- **Kiro / VSCodium / Cursor** (Open VSX): Extensiones (`Ctrl+Shift+X`) → busca **Arcanos Theme** → Instalar. O en la web: <https://open-vsx.org/extension/el-ermitanho/arcanos-theme>.
+- **Archivo `.vsix`**: descárgalo de [Releases](https://github.com/el-ermitanho/arcanos-theme/releases) y en el editor: `Ctrl+Shift+P` → *Extensions: Install from VSIX…*.
 
 Luego elige la carta: `Ctrl+K` `Ctrl+T` → **Arcanos · …**
 
@@ -58,4 +58,4 @@ Cada paleta se revisa al generar los temas (`npm run generar` falla si no cumple
 
 ¿Quieres otra carta? Agrega su paleta a `paletas.json` y corre `npm run generar`.
 
-Licencia MIT · Parte del mazo de [davidsant7e](https://github.com/davidsant7e).
+Licencia MIT · Parte del mazo de [el-ermitanho](https://github.com/el-ermitanho).

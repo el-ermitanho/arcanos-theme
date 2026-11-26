@@ -48,8 +48,8 @@ jobs:
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
         run: |
           if [ -z "$OVSX_PAT" ]; then echo "::error::Falta el secreto OVSX_PAT (token de open-vsx.org)"; exit 1; fi
-          # La primera vez crea el espacio «davidsant7e» (si ya existe, sigue).
-          npx ovsx create-namespace davidsant7e -p "$OVSX_PAT" || true
+          # La primera vez crea el espacio «el-ermitanho» (si ya existe, sigue).
+          npx ovsx create-namespace el-ermitanho -p "$OVSX_PAT" || true
           npx ovsx publish arcanos-theme.vsix -p "$OVSX_PAT"
 
       - name: Release en GitHub

@@ -1,5 +1,8 @@
 # Cambios
 
+## 1.0.1 — 26 nov 2026
+- Nuevo publicador: **el-ermitanho** (antes davidsant7e). El identificador pasa a ser `el-ermitanho.arcanos-theme`; los temas no cambian.
+
 ## 1.0.0 — 26 nov 2026
 - Primera versión: seis temas inspirados en los Arcanos Mayores.
   - **Arcanos** (oscuro, el duotono azul noche + durazno), **XVIII La Luna**, **XVII La Estrella**, **IX El Ermitaño** (oscuros).
