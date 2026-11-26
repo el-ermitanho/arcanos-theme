@@ -54,7 +54,7 @@ Cada paleta se revisa al generar los temas (`npm run generar` falla si no cumple
 - `paletas.json`: una paleta por carta (fondos, texto, acento y 12 colores de sintaxis).
 - `scripts/generar.mjs`: convierte cada paleta en `themes/<carta>-color-theme.json` (colores del editor, terminal, git, corchetes, colores semánticos) y revisa el contraste.
 - `scripts/capturas.mjs`: genera las capturas con [Shiki](https://shiki.style) y Playwright.
-- Publicación: al crear una etiqueta `v*`, GitHub Actions genera los temas, empaqueta el `.vsix`, lo publica en **Open VSX** y lo adjunta a la release.
+- Publicación: en cada push a `main`, si la versión de `package.json` no tiene release, GitHub Actions empaqueta el `.vsix`, lo publica en **Open VSX** y crea la release `v<versión>`.
 
 ¿Quieres otra carta? Agrega su paleta a `paletas.json` y corre `npm run generar`.
 
