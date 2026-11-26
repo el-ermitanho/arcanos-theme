@@ -52,6 +52,18 @@ jobs:
           npx ovsx create-namespace el-ermitanho -p "$OVSX_PAT" || true
           npx ovsx publish arcanos-theme.vsix -p "$OVSX_PAT"
 
+      - name: Publicar en VS Code Marketplace
+        # Independiente de la release: publica si la versión aún no está en el Marketplace.
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: |
+          if [ -z "$VSCE_PAT" ]; then echo "::warning::Sin el secreto VSCE_PAT: no se publica en el VS Code Marketplace"; exit 0; fi
+          v="$(node -p "require('./package.json').version")"
+          publicada="$(npx vsce show el-ermitanho.arcanos-theme --json 2>/dev/null | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).versions[0].version)}catch{console.log("")}})')"
+          echo "Marketplace: '${publicada:-ninguna}' · package.json: $v"
+          if [ "$publicada" = "$v" ]; then echo "La $v ya está en el Marketplace"; exit 0; fi
+          npx vsce publish --packagePath arcanos-theme.vsix -p "$VSCE_PAT"
+
       - name: Release en GitHub
         if: steps.version.outputs.nueva == 'si'
         env:

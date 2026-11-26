@@ -37,6 +37,7 @@ Temas de color para **VS Code**, **Kiro** y otros editores compatibles, inspirad
 
 ## Instalar
 
+- **VS Code** (Marketplace): Extensiones (`Ctrl+Shift+X`) → busca **Arcanos Theme** → Instalar. O en la web: <https://marketplace.visualstudio.com/items?itemName=el-ermitanho.arcanos-theme>.
 - **Kiro / VSCodium / Cursor** (Open VSX): Extensiones (`Ctrl+Shift+X`) → busca **Arcanos Theme** → Instalar. O en la web: <https://open-vsx.org/extension/el-ermitanho/arcanos-theme>.
 - **Archivo `.vsix`**: descárgalo de [Releases](https://github.com/el-ermitanho/arcanos-theme/releases) y en el editor: `Ctrl+Shift+P` → *Extensions: Install from VSIX…*.
 
