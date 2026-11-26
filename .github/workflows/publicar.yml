@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write   # Trusted Publishing del VS Code Marketplace (sin PAT)
 
 jobs:
   vsix:
@@ -53,16 +54,16 @@ jobs:
           npx ovsx publish arcanos-theme.vsix -p "$OVSX_PAT"
 
       - name: Publicar en VS Code Marketplace
+        # Trusted Publishing (OIDC): sin token guardado. Requiere la política creada en
+        # marketplace.visualstudio.com/manage → el-ermitanho → Trusted Publishing (repo arcanos-theme, flujo publicar.yml).
         # Independiente de la release: publica si la versión aún no está en el Marketplace.
-        env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        continue-on-error: true
         run: |
-          if [ -z "$VSCE_PAT" ]; then echo "::warning::Sin el secreto VSCE_PAT: no se publica en el VS Code Marketplace"; exit 0; fi
           v="$(node -p "require('./package.json').version")"
           publicada="$(npx vsce show el-ermitanho.arcanos-theme --json 2>/dev/null | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).versions[0].version)}catch{console.log("")}})')"
           echo "Marketplace: '${publicada:-ninguna}' · package.json: $v"
           if [ "$publicada" = "$v" ]; then echo "La $v ya está en el Marketplace"; exit 0; fi
-          npx vsce publish --packagePath arcanos-theme.vsix -p "$VSCE_PAT"
+          npx vsce publish --packagePath arcanos-theme.vsix --oidc || { echo "::warning::No se pudo publicar en el Marketplace: ¿falta la política de Trusted Publishing?"; exit 1; }
 
       - name: Release en GitHub
         if: steps.version.outputs.nueva == 'si'

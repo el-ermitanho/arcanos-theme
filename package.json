@@ -78,7 +78,7 @@
     "empaquetar": "node scripts/generar.mjs && vsce package --no-dependencies"
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.6.2",
+    "@vscode/vsce": "4.1.0",
     "ovsx": "^1.3.0",
     "shiki": "^4.6.0"
   }
